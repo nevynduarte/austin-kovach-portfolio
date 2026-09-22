@@ -1,0 +1,2 @@
+import axe from 'axe-core';
+window.addEventListener('message',async e=>{if(e.origin!==location.origin||e.data!=='audit')return;try{const r=await axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}});parent.postMessage({violations:r.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.map(n=>n.target)})),passes:r.passes.length,width:document.documentElement.clientWidth,scrollWidth:document.documentElement.scrollWidth},location.origin);}catch(error){parent.postMessage({error:String(error)},location.origin);}});

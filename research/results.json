@@ -1,0 +1,34 @@
+[
+  {
+    "name": "coffee",
+    "vertices": 11976,
+    "faces": 23948,
+    "seconds": 20.34,
+    "method": "TripoSR single-image CPU; skimage marching cubes; resolution 128",
+    "status": "experimental\u2014not dimensionally verified"
+  },
+  {
+    "name": "mobility",
+    "vertices": 9495,
+    "faces": 18982,
+    "seconds": 22.82,
+    "method": "TripoSR single-image CPU; skimage marching cubes; resolution 128",
+    "status": "experimental\u2014not dimensionally verified"
+  },
+  {
+    "name": "haven",
+    "vertices": 8032,
+    "faces": 16072,
+    "seconds": 20.07,
+    "method": "TripoSR single-image CPU; skimage marching cubes; resolution 128",
+    "status": "experimental\u2014not dimensionally verified"
+  },
+  {
+    "name": "wrench",
+    "vertices": 5034,
+    "faces": 10064,
+    "seconds": 18.86,
+    "method": "TripoSR single-image CPU; skimage marching cubes; resolution 128",
+    "status": "experimental\u2014not dimensionally verified"
+  }
+]

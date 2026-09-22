@@ -1,0 +1,75 @@
+[
+  {
+    "id": "coffee",
+    "parts": [
+      "Rubber base",
+      "Outer mug",
+      "Grip twist",
+      "Internal mug",
+      "Filter basket",
+      "Filter lid",
+      "Leak-proof lid",
+      "Strap mount"
+    ],
+    "bytes": 121180,
+    "method": "Image-guided parametric component reconstruction",
+    "dimensionalAccuracy": "Not verified; relative units",
+    "sourcePages": "3–8"
+  },
+  {
+    "id": "mobility",
+    "parts": [
+      "Chassis and deck",
+      "Front wheel pair",
+      "Rear wheel",
+      "Body shell",
+      "Storage door",
+      "Lighting",
+      "Steering stem",
+      "Handlebar and controls"
+    ],
+    "bytes": 145804,
+    "method": "Image-guided parametric component reconstruction",
+    "dimensionalAccuracy": "Not verified; relative units",
+    "sourcePages": "9–13"
+  },
+  {
+    "id": "haven",
+    "parts": [
+      "Central support",
+      "Rider display",
+      "Perch table",
+      "Lower canopy",
+      "Upper canopy",
+      "Solar panels",
+      "Left enclosure",
+      "Left sliding door",
+      "Left bench",
+      "Right enclosure",
+      "Right sliding door",
+      "Right bench"
+    ],
+    "bytes": 178896,
+    "method": "Image-guided parametric component reconstruction",
+    "dimensionalAccuracy": "Not verified; relative units",
+    "sourcePages": "14–18"
+  },
+  {
+    "id": "wrench",
+    "parts": [
+      "Housing and grip",
+      "Rear mode dial",
+      "Hammer case",
+      "Detachable LED ring",
+      "Drive anvil",
+      "Motor assembly",
+      "Trigger",
+      "Air inlet",
+      "Housing fasteners"
+    ],
+    "bytes": 146232,
+    "method": "Image-guided parametric component reconstruction",
+    "dimensionalAccuracy": "Not verified; relative units",
+    "sourcePages": "19–23"
+  }
+]
