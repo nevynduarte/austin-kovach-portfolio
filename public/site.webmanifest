@@ -1,0 +1,10 @@
+{
+  "name": "Austin Kovach — Industrial Designer",
+  "short_name": "Austin Kovach",
+  "description": "Industrial design portfolio by Austin Kovach in Bedminster, New Jersey.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#151719",
+  "theme_color": "#151719",
+  "icons": [{"src":"/favicon.svg","sizes":"any","type":"image/svg+xml"}]
+}
