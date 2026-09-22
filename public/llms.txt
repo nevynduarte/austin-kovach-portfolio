@@ -1,5 +1,7 @@
 # Austin Kovach — Industrial Designer
 
+Canonical website: https://austin-kovach-portfolio.nevynjduarte.workers.dev/
+
 Austin Kovach is an industrial and product designer in Bedminster, New Jersey, with a BFA in Industrial Design from Montclair State University. His work focuses on product design, concept development, user interaction, 3D modeling, rendering, prototyping, model making, and visual communication.
 
 ## Selected projects
@@ -21,6 +23,6 @@ Austin Kovach is an industrial and product designer in Bedminster, New Jersey, w
 - Email: austinkovach8@gmail.com
 - Phone: +1 908 642 6928
 - LinkedIn: https://www.linkedin.com/in/austinkovach
-- Portfolio PDF: /downloads/Austin-Kovach-Portfolio.pdf
+- Portfolio PDF: https://austin-kovach-portfolio.nevynjduarte.workers.dev/downloads/Austin-Kovach-Portfolio.pdf
 
 The interactive 3D assemblies are image-guided visual studies rather than dimensionally verified CAD.
