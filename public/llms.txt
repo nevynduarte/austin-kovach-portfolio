@@ -25,4 +25,4 @@ Austin Kovach is an industrial and product designer in Bedminster, New Jersey, w
 - LinkedIn: https://www.linkedin.com/in/austinkovach
 - Portfolio PDF: https://austin-kovach-portfolio.nevynjduarte.workers.dev/downloads/Austin-Kovach-Portfolio.pdf
 
-The interactive 3D assemblies are image-guided visual studies rather than dimensionally verified CAD.
+The interactive 3D assemblies use Austin Kovach's supplied project exports, optimized for browser delivery with selectable components and exploded views.

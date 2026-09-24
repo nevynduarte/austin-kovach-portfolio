@@ -21,7 +21,7 @@ export function createViewer(host,onSelect){
  function bounds(object){return new T.Box3().setFromObject(object);}
  function desiredDistance(box){const size=box.getSize(new T.Vector3());return Math.max(size.y,size.x/Math.max(.4,camera.aspect),size.z)*.5/Math.tan(T.MathUtils.degToRad(camera.fov/2))*1.42;}
  function frameObject(object){const b=bounds(object);targetPoint.copy(b.getCenter(new T.Vector3()));targetDistance=Math.max(.25,desiredDistance(b));}
- function highlight(){root?.traverse(o=>{if(!o.isMesh)return;let part=o;while(part&&!part.userData.part)part=part.parent;let chosen=part===selected;o.visible=!isolated||!selected||chosen;if(o.material.emissive){o.material.emissive.copy(o.userData.originalEmissive||new T.Color(0));if(chosen)o.material.emissive.set('#4b6a42');o.material.emissiveIntensity=chosen?.32:(o.userData.originalIntensity||0);}});}
+ function highlight(){root?.traverse(o=>{if(!o.isMesh)return;let part=o;while(part&&!part.userData.part)part=part.parent;let chosen=part===selected;o.visible=!isolated||!selected||chosen;const materials=Array.isArray(o.material)?o.material:[o.material];materials.forEach((material,index)=>{if(!material.emissive)return;material.emissive.copy(o.userData.originalEmissive?.[index]||new T.Color(0));if(chosen)material.emissive.set('#4b6a42');material.emissiveIntensity=chosen?.32:(o.userData.originalIntensity?.[index]||0);});});}
  function select(name){selected=parts.find(p=>p.name===name)||null;isolated=false;highlight();if(selected)frameObject(selected);else frameObject(root);onSelect(selected);request();}
  async function load(id,mode='assembly'){
   const token=++serial;const gltf=await loader.loadAsync(mode==='assembly'?`/models/${id}.glb`:`/models/${id}-triposr.glb`);if(token!==serial){dispose(gltf.scene);return [];}
@@ -29,7 +29,7 @@ export function createViewer(host,onSelect){
   if(mode!=='assembly')root.rotation.x=-Math.PI/2;
   const b=bounds(root),s=b.getSize(new T.Vector3());if(mode!=='assembly'){root.scale.setScalar(2.7/Math.max(s.x,s.y,s.z));}
   const b2=bounds(root),center=b2.getCenter(new T.Vector3());root.position.set(-center.x,-b2.min.y,-center.z);
-  scene.add(root);parts=[];root.traverse(o=>{if(o.userData.part){o.userData.base=o.position.clone();parts.push(o);}if(o.isMesh){o.material=o.material.clone();o.userData.originalEmissive=o.material.emissive?.clone();o.userData.originalIntensity=o.material.emissiveIntensity;}});
+  scene.add(root);parts=[];root.traverse(o=>{if(o.userData.part){o.userData.base=o.position.clone();parts.push(o);}if(o.isMesh){o.material=Array.isArray(o.material)?o.material.map(material=>material.clone()):o.material.clone();const materials=Array.isArray(o.material)?o.material:[o.material];o.userData.originalEmissive=materials.map(material=>material.emissive?.clone());o.userData.originalIntensity=materials.map(material=>material.emissiveIntensity);}});
   selected=null;amount=0;targetAmount=0;controls.autoRotate=false;isolated=false;frameObject(root);fitRadius=targetDistance;controls.minDistance=.15;controls.maxDistance=fitRadius*3;
   controls.target.copy(targetPoint);camera.position.copy(targetPoint).add(new T.Vector3(1,.55,1.5).normalize().multiplyScalar(fitRadius));targetDistance=null;controls.update();request();return parts;
  }

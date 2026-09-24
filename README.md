@@ -18,16 +18,16 @@ Deploy `dist/` as static files. See DEPLOY.md for free Cloudflare Pages hosting 
 
 - Original PDF artwork and large zoomable PhotoSwipe galleries.
 - Lazy-loaded Three.js viewer: orbit, zoom, named component selection, framing, isolation, exploded slider, reset, optional rotation.
-- 37 named components: coffee maker (8), mobility concept (8), shelter (12), impact wrench (9).
-- glTF Transform and meshopt optimization: each assembly approximately 121–179 KB.
+- Named, selectable components retained from Austin's original project assemblies.
+- glTF Transform and meshopt delivery compression: the four 5–106 MB exports become 1.1–3.1 MB browser assets without geometry simplification.
 - Vite build, Motion introduction, keyboard tabs and 3D controls, reduced-motion handling, responsive layout, and image fallback when WebGL is unavailable.
 - Playwright regression suite, axe accessibility harness, Lighthouse CI configuration.
 
-## Accuracy and reconstruction experiment
+## Authoritative 3D exports
 
-These are visual interpretations, **not precise CAD or fabrication-ready parts**. The PDF supplies no scale, tolerances, full orthographic views, internal geometry, or original CAD. Components and explosion offsets were authored from visible reference images in `scripts/model-recipes.mjs`. Mechanical internals are illustrative.
+The featured viewer uses Austin Kovach's supplied GLB project exports. `scripts/process-authoritative-models.mjs` preserves their geometry, hierarchy, materials, and named assemblies; adds viewer metadata; and applies meshopt delivery compression. The source exports remain the authority and the optimized browser files are not fabrication deliverables.
 
-We actually ran [TripoSR](https://github.com/VAST-AI-Research/TripoSR) locally on CPU on four extracted images, with [rembg](https://github.com/danielgatis/rembg) U2NetP masks and a scikit-image marching-cubes adapter. The initial white-background pass produced background slabs. A corrected masked gray-background pass improved silhouettes, but inferred backs, thin parts, and transparent shelter panels remained unreliable. Trials are retained in `public/models/*-triposr.glb` for review, **not featured in the portfolio viewer**. The authored component studies are the visible 3D presentation.
+Earlier [TripoSR](https://github.com/VAST-AI-Research/TripoSR) image-reconstruction trials are retained in `public/models/*-triposr.glb` for technical review, but are **not featured in the portfolio viewer**. Austin's supplied exports are now the visible 3D presentation.
 
 Final trial counts: coffee 11,976 vertices / 23,948 faces; mobility 9,495 / 18,982; haven 8,032 / 16,072; wrench 5,034 / 10,064. See `research/` for diagnostic renderings, prepared inputs, results, and the working environment list. Diagnostic renderings are not portfolio artwork.
 
@@ -41,12 +41,12 @@ Blender 4.5 was tried but its binary could not run in this environment. No Blend
 4. Run `python scripts/extract-assets.py`, then `RECONSTRUCTION_ROOT=/absolute/path python scripts/reconstruct-triposr.py`.
 5. Outputs appear in `reconstruction-work/inference`. Model weights and third-party source checkouts are not bundled.
 
-`npm run models` regenerates component studies. `scripts/asset-provenance.json` records PDF page/crop/xref origins. Portfolio artwork and branding remain Austin's or their respective owners'; open-source tool licenses do not grant rights to that artwork.
+`npm run models -- /path/to/source-exports` regenerates the web models. `public/models/manifest.json` records filenames, hashes, component names, and output sizes. `scripts/asset-provenance.json` records PDF page/crop/xref origins. Portfolio artwork, models, and branding remain Austin's or their respective owners'; open-source tool licenses do not grant rights to that work.
 
 ## Verification
 
 - Production Vite build passed.
-- All eight meshes have finite coordinates and nonempty faces; all 37 component groups survive optimization.
+- All four authoritative assemblies load after meshopt compression and preserve selectable component metadata.
 - Settled desktop (1265px content) and narrow-screen (375px content) axe audits: **zero WCAG 2 A/AA and 2.1 AA violations**, with 27 and 28 passing rules. Automated coverage is not full accessibility certification.
 - Browser-checked project switching, arrow-key tabs, full-size gallery, next image, Escape dismissal, and WebGL fallback. No document overflow at the tested widths.
 - Diagnostic mesh renderings reviewed. The available browser disables WebGL, so GPU rendering, dragging, mesh hit testing, exploded animation, and touch gestures are **not runtime-certified here**.

@@ -1,75 +1,98 @@
 [
   {
     "id": "coffee",
+    "source": "Wacaco_for_web.glb",
+    "sourceSha256": "32ec8960752ac15aa1925f0f180a9fe753a6f14527ee67c35bd92493bbc25415",
     "parts": [
-      "Rubber base",
-      "Outer mug",
+      "Internal cup",
       "Grip twist",
-      "Internal mug",
-      "Filter basket",
-      "Filter lid",
+      "Outer mug",
       "Leak-proof lid",
-      "Strap mount"
+      "Filter basket",
+      "Filter seal",
+      "Lid seal",
+      "Filter lid",
+      "Filter"
     ],
-    "bytes": 121180,
-    "method": "Image-guided parametric component reconstruction",
-    "dimensionalAccuracy": "Not verified; relative units",
-    "sourcePages": "3–8"
+    "sourceBytes": 5676300,
+    "optimizedBytes": 1145144,
+    "method": "Austin Kovach supplied GLB export; lossless deduplication and meshopt delivery compression"
   },
   {
     "id": "mobility",
+    "source": "scooter_for_web.glb",
+    "sourceSha256": "cd9d9703423840f4625b1e93946074c550274efd0ad8bcd6f244ed9ff9f13d7b",
     "parts": [
-      "Chassis and deck",
-      "Front wheel pair",
+      "Brake disc",
+      "Storage compartment",
+      "Secondary grip",
+      "Rear axle",
+      "Power control",
+      "Storage compartment 2",
+      "Brake disc 2",
+      "Steering mechanism",
+      "Front tire",
+      "Deck",
+      "Front wheel",
       "Rear wheel",
-      "Body shell",
-      "Storage door",
-      "Lighting",
-      "Steering stem",
-      "Handlebar and controls"
+      "Steering column",
+      "Storage compartment 3",
+      "Handlebar grip"
     ],
-    "bytes": 145804,
-    "method": "Image-guided parametric component reconstruction",
-    "dimensionalAccuracy": "Not verified; relative units",
-    "sourcePages": "9–13"
-  },
-  {
-    "id": "haven",
-    "parts": [
-      "Central support",
-      "Rider display",
-      "Perch table",
-      "Lower canopy",
-      "Upper canopy",
-      "Solar panels",
-      "Left enclosure",
-      "Left sliding door",
-      "Left bench",
-      "Right enclosure",
-      "Right sliding door",
-      "Right bench"
-    ],
-    "bytes": 178896,
-    "method": "Image-guided parametric component reconstruction",
-    "dimensionalAccuracy": "Not verified; relative units",
-    "sourcePages": "14–18"
+    "sourceBytes": 13610400,
+    "optimizedBytes": 1817972,
+    "method": "Austin Kovach supplied GLB export; lossless deduplication and meshopt delivery compression"
   },
   {
     "id": "wrench",
+    "source": "IR_impact_for_web.glb",
+    "sourceSha256": "ae12464f76e1d3f3a8a71add15f192a024097ab464ecce04a35adc8de5f97ef0",
     "parts": [
-      "Housing and grip",
-      "Rear mode dial",
+      "Power regulator",
+      "Housing gasket",
+      "Rear housing",
       "Hammer case",
+      "Direction controls",
       "Detachable LED ring",
-      "Drive anvil",
-      "Motor assembly",
+      "Direction controls 2",
       "Trigger",
-      "Air inlet",
-      "Housing fasteners"
+      "Air vent",
+      "Cartridge assembly",
+      "Motor and anvil assembly"
     ],
-    "bytes": 146232,
-    "method": "Image-guided parametric component reconstruction",
-    "dimensionalAccuracy": "Not verified; relative units",
-    "sourcePages": "19–23"
+    "sourceBytes": 20533536,
+    "optimizedBytes": 3163984,
+    "method": "Austin Kovach supplied GLB export; lossless deduplication and meshopt delivery compression"
+  },
+  {
+    "id": "haven",
+    "source": "final_mod_shelter_official_for_web.glb",
+    "sourceSha256": "8140ba2673a8cc35911bf74ce453f2b6e8f6cc8d6cc142630835c7621fcda3db",
+    "parts": [
+      "Rider information displays",
+      "Modular glass wings",
+      "Perch seating",
+      "Center roof plate",
+      "Perch seating 2",
+      "Modular glass wings 2",
+      "Sliding door assemblies",
+      "Sliding door assemblies 2",
+      "Sliding door assemblies 3",
+      "Sliding door assemblies 4",
+      "Sliding door assemblies 5",
+      "Sliding door assemblies 6",
+      "Canopy assemblies",
+      "Canopy assemblies 2",
+      "Bench assemblies",
+      "Bench assemblies 2",
+      "Sliding door assemblies 7",
+      "Sliding door assemblies 8",
+      "Rider information displays 2",
+      "Central support",
+      "Central support 2"
+    ],
+    "sourceBytes": 110697328,
+    "optimizedBytes": 3293092,
+    "method": "Austin Kovach supplied GLB export; lossless deduplication and meshopt delivery compression"
   }
 ]
